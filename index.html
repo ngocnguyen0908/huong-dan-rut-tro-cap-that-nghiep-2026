@@ -74,18 +74,12 @@
         }
         .btn-primary { background: #ffc107; color: #000; }
         .btn-outline { border: 2px solid white; color: white; }
-        .btn-success { background: #28a745; color: white; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
         /* CARDS & GRIDS */
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .card { background: var(--bg-light); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); height: 100%; }
         .card h3 { color: var(--primary-color); margin-bottom: 15px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
-
-        .formula-box {
-            background: var(--primary-color); color: white; padding: 20px;
-            border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; margin: 15px 0;
-        }
 
         /* TABLE */
         .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; }
@@ -291,6 +285,7 @@
         <div class="container">
             <h2 class="section-title reveal">Các bước nộp hồ sơ (Thao tác chi tiết)</h2>
             <div class="steps-wrapper reveal">
+                <!-- BƯỚC 1 -->
                 <div class="step-item">
                     <input type="checkbox" id="step1" class="step-trigger" checked>
                     <label for="step1" class="step-header">
@@ -300,12 +295,13 @@
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p><a href="https://ncovi.dichvucong.gov.vn/p/home/dvc-ncovi-chi-tiet-thu-tuc-giai-quyet-nhan-tro-cap-that-nghiep.html?ma_thu_tuc=1.001978" target="_blank" class="ui-link">Bấm vào link này nộp hồ sơ trực tuyến</a>.</p>
-                            <p>Đăng nhập bằng <strong>VNeID</strong> hoặc Cổng DVC. Sau đó nhấn nút <span class="ui-btn" style="background:#28a745; color:white;">Nộp trực tuyến</span>.</p>
+                            <p style="margin-bottom: 10px;"><a href="https://ncovi.dichvucong.gov.vn/p/home/dvc-ncovi-chi-tiet-thu-tuc-giai-quyet-nhan-tro-cap-that-nghiep.html?ma_thu_tuc=1.001978" target="_blank" class="ui-link">Bấm vào link này nộp hồ sơ trực tuyến</a>.</p>
+                            <p>Bấm <strong>Đăng nhập</strong> bằng tài khoản Cổng dịch vụ công Quốc gia hoặc <strong>VNeID</strong>. Sau khi đăng nhập thành công, hệ thống sẽ đưa bạn quay lại trang thủ tục, nhấn nút <span class="ui-btn" style="background:#28a745; color:white;">Nộp trực tuyến</span>.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- BƯỚC 2 -->
                 <div class="step-item">
                     <input type="checkbox" id="step2" class="step-trigger">
                     <label for="step2" class="step-header">
@@ -315,11 +311,17 @@
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Nhập <strong>Mã số BHXH</strong> (10 số). Chọn hình thức nhận qua tài khoản ngân hàng (STK phải chính chủ).</p>
+                            <p>Hệ thống tự điền tên và số CCCD. Bạn cần kiểm tra và nhập bổ sung:</p>
+                            <ul style="margin-left: 20px; list-style-type: disc; margin-top: 10px;">
+                                <li><strong>Mã số BHXH:</strong> Nhập 10 số ghi trên bìa sổ BHXH.</li>
+                                <li><strong>Hình thức nhận:</strong> Chọn "Qua tài khoản". Nhập chính xác số tài khoản và tên ngân hàng (phải là tài khoản chính chủ).</li>
+                                <li><strong>Nơi hưởng:</strong> Chọn tỉnh/thành phố nơi bạn đang cư trú và muốn nhận thông báo kết quả.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- BƯỚC 3 -->
                 <div class="step-item">
                     <input type="checkbox" id="step3" class="step-trigger">
                     <label for="step3" class="step-header">
@@ -329,21 +331,28 @@
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Tải lên ảnh <strong>Quyết định thôi việc</strong> và <strong>Sổ BHXH</strong> (đã chốt) mà bạn đã chuẩn bị trước đó.</p>
+                            <p>Tải lên ảnh chụp hoặc file PDF của các giấy tờ đã chuẩn bị ở phần danh mục:</p>
+                            <ul style="margin-left: 20px; list-style-type: disc; margin-top: 10px;">
+                                <li><strong>Mục 1 (Giấy tờ rời việc):</strong> Tải ảnh Quyết định thôi việc/chấm dứt HĐLD.</li>
+                                <li><strong>Mục 2 (Sổ BHXH):</strong> Tải ảnh bìa sổ và toàn bộ các tờ rời chốt quá trình đóng BHTN.</li>
+                            </ul>
+                            <p style="margin-top: 10px; font-style: italic;">*Lưu ý: Chụp ảnh rõ nét, không bị mất góc, không bị lóa sáng để cán bộ dễ kiểm duyệt.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- BƯỚC 4 -->
                 <div class="step-item">
                     <input type="checkbox" id="step4" class="step-trigger">
                     <label for="step4" class="step-header">
                         <div class="step-num">4</div>
-                        <div class="step-title">Hoàn tất & Theo dõi</div>
+                        <div class="step-title">Gửi hồ sơ & Theo dõi mã</div>
                         <div class="step-icon">▼</div>
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Nhấn <span class="ui-btn" style="background:#007bff; color:white;">Nộp hồ sơ</span> và lưu lại mã hồ sơ để tra cứu tiến độ xử lý.</p>
+                            <p>Rà soát lại toàn bộ thông tin lần cuối. Nhập mã xác nhận (Captcha) và nhấn <span class="ui-btn" style="background:#007bff; color:white;">Nộp hồ sơ</span>.</p>
+                            <p style="margin-top: 10px;"><strong>Sau khi nộp:</strong> Hệ thống sẽ cấp một <strong>Mã hồ sơ</strong>. Hãy chụp màn hình hoặc lưu lại mã này để tra cứu tại mục "Hồ sơ của tôi" để biết hồ sơ đã được tiếp nhận hay cần bổ sung gì thêm.</p>
                         </div>
                     </div>
                 </div>
@@ -373,7 +382,6 @@
         };
 
         window.addEventListener('scroll', revealOnScroll);
-        // Initial check on load
         window.addEventListener('load', revealOnScroll);
     </script>
 
