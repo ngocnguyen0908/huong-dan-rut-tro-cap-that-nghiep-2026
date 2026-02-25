@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Rút Trợ Cấp Thất Nghiệp 2026 - Chi Tiết Online</title>
+    <style>
+        /* CSS VARIABLES */
+        :root {
+            --primary-color: #002147;
+            --accent-color: #004085;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #e0e0e0;
+            --warning-color: #fff3cd;
+            --warning-border: #ffeeba;
+            --warning-text: #856404;
+            --success-color: #28a745;
+            --highlight-bg: #e2e8f0;
+            --highlight-text: #d9534f;
+            --container-width: 1100px;
+            --transition: all 0.3s ease;
+        }
+
+        /* RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-white);
+        }
+
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+        section { padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+
+        .section-title {
+            text-align: center; font-size: 2rem; color: var(--primary-color);
+            margin-bottom: 40px; position: relative;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background: var(--primary-color); margin: 15px auto 0; border-radius: 2px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white; padding: 100px 0 80px; text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; }
+        
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; padding: 14px 28px; font-weight: 600;
+            border-radius: 8px; transition: var(--transition); cursor: pointer;
+            text-decoration: none; border: none;
+        }
+        .btn-primary { background: #ffc107; color: #000; }
+        .btn-outline { border: 2px solid white; color: white; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* CARDS & GRIDS */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-light); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); }
+        .card h3 { color: var(--primary-color); margin-bottom: 15px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+
+        .formula-box {
+            background: var(--primary-color); color: white; padding: 20px;
+            border-radius: 8px; text-align: center; font-size: 1.3rem; font-weight: bold; margin: 15px 0;
+        }
+
+        .check-list li { list-style: none; padding-left: 30px; position: relative; margin-bottom: 12px; }
+        .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success-color); font-weight: bold; }
+        .info-tag { display: inline-block; background: #e9ecef; padding: 2px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
+
+        /* ACCORDION STEPS */
+        .steps-wrapper { max-width: 900px; margin: 0 auto; }
+        .step-item {
+            background: var(--bg-light); border-radius: 10px; margin-bottom: 12px;
+            overflow: hidden; border: 1px solid var(--border-color);
+        }
+        .step-header {
+            padding: 18px 25px; display: flex; align-items: center;
+            cursor: pointer; transition: var(--transition); background: white;
+            user-select: none;
+        }
+        .step-header:hover { background: #f1f5f9; }
+        .step-num {
+            width: 32px; height: 32px; background: var(--primary-color);
+            color: white; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-weight: bold; margin-right: 15px; flex-shrink: 0;
+        }
+        .step-title { font-weight: 600; font-size: 1.05rem; flex-grow: 1; color: var(--primary-color); }
+        .step-icon { transition: var(--transition); font-size: 0.8rem; opacity: 0.5; }
+
+        .step-content {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;
+            background: #fafafa;
+        }
+        .step-inner { padding: 25px; border-top: 1px solid var(--border-color); }
+        .step-inner ul { margin-left: 20px; list-style-type: disc; }
+        .step-inner li { margin-bottom: 10px; }
+        
+        /* UI Highlighting */
+        .ui-btn { display: inline-block; background: var(--highlight-bg); padding: 2px 8px; border-radius: 4px; font-weight: 600; color: var(--highlight-text); border: 1px solid #cbd5e1; }
+        .ui-link { color: #0056b3; font-weight: 600; text-decoration: underline; }
+
+        .step-trigger { display: none; }
+        .step-trigger:checked ~ .step-content { max-height: 1200px; }
+        .step-trigger:checked ~ .step-header { background: #f8fafc; border-bottom: 1px solid var(--border-color); }
+        .step-trigger:checked ~ .step-header .step-icon { transform: rotate(180deg); }
+
+        /* FOOTER */
+        footer { background: var(--primary-color); color: white; padding: 40px 0; text-align: center; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <h1>HƯỚNG DẪN TRỢ CẤP THẤT NGHIỆP 2026</h1>
+            <p>Dễ hiểu, đúng quy trình - Hướng dẫn nộp hồ sơ trực tuyến chi tiết nhất trên Cổng dịch vụ công Quốc gia.</p>
+            <div class="btn-group">
+                <a href="https://ncovi.dichvucong.gov.vn/p/home/dvc-ncovi-chi-tiet-thu-tuc-giai-quyet-nhan-tro-cap-that-nghiep.html?ma_thu_tuc=1.001978" target="_blank" class="btn btn-primary">Nộp hồ sơ trực tuyến ngay</a>
+                <a href="#quy-trinh" class="btn btn-outline">Hướng dẫn thao tác chi tiết</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ĐIỀU KIỆN CHI TIẾT -->
+    <section id="dieu-kien">
+        <div class="container">
+            <h2 class="section-title">Điều Kiện Nhận Trợ Cấp (Chi Tiết)</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="info-tag">Về Hợp Đồng</span>
+                    <h3>1. Chấm dứt HĐLD</h3>
+                    <ul class="check-list">
+                        <li>Đã chấm dứt HĐLD hoặc hợp đồng làm việc đúng luật.</li>
+                        <li><strong>Không áp dụng:</strong> NLĐ đơn phương chấm dứt HĐ trái luật; NLĐ đang hưởng lương hưu/trợ cấp mất sức lao động hàng tháng.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="info-tag">Về Thời Gian Đóng</span>
+                    <h3>2. Thời gian đóng BHTN</h3>
+                    <ul class="check-list">
+                        <li><strong>Đối với HĐ không xác định thời hạn/có xác định thời hạn:</strong> Đóng đủ 12 tháng trở lên trong vòng 24 tháng trước khi nghỉ.</li>
+                        <li><strong>Đối với HĐ mùa vụ (3-12 tháng):</strong> Đóng đủ 12 tháng trở lên trong vòng 36 tháng trước khi nghỉ.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="info-tag">Về Thời Hạn Nộp</span>
+                    <h3>3. Thời hạn nộp hồ sơ</h3>
+                    <ul class="check-list">
+                        <li>Phải nộp hồ sơ trong vòng <strong>03 tháng</strong> (90 ngày) kể từ ngày chấm dứt HĐLD.</li>
+                        <li>Quá 90 ngày, hồ sơ sẽ không được chấp nhận (thời gian đóng sẽ được bảo lưu cho lần sau).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUYỀN LỢI & VÍ DỤ -->
+    <section id="quyen-loi" style="background: #fafafa;">
+        <div class="container">
+            <h2 class="section-title">Mức Hưởng & Ví Dụ Cụ Thể</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="background: white; text-align: center;">
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;">Số tiền nhận mỗi tháng được tính như sau:</p>
+                    <div class="formula-box">60% x Bình quân tiền lương đóng BHTN 06 tháng cuối</div>
+                    
+                    <div style="text-align: left; margin-top: 30px; padding: 20px; border-left: 4px solid var(--accent-color); background: #f1f5f9;">
+                        <h4 style="margin-bottom: 10px;">Ví dụ thực tế:</h4>
+                        <p>Anh A có mức lương đóng Bảo hiểm 6 tháng cuối lần lượt là: 8tr, 8tr, 9tr, 9tr, 10tr, 10tr.</p>
+                        <p>• <strong>Lương bình quân:</strong> (8+8+9+9+10+10) / 6 = 9.000.000đ.</p>
+                        <p>• <strong>Số tiền hưởng mỗi tháng:</strong> 9.000.000đ x 60% = <strong>5.400.000đ/tháng</strong>.</p>
+                        <p>• Nếu anh A đóng bảo hiểm được 4 năm (48 tháng): Anh được hưởng <strong>04 tháng</strong> trợ cấp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUY TRÌNH THAO TÁC RÕ RÀNG -->
+    <section id="quy-trinh">
+        <div class="container">
+            <h2 class="section-title">Thao Tác Từng Bước Trên Web</h2>
+            <div class="steps-wrapper">
+                <!-- BƯỚC 1 -->
+                <div class="step-item">
+                    <input type="checkbox" id="step1" class="step-trigger" checked>
+                    <label for="step1" class="step-header">
+                        <div class="step-num">1</div>
+                        <div class="step-title">Đăng nhập bằng tài khoản Cổng DVC/VNeID</div>
+                        <div class="step-icon">▼</div>
+                    </label>
+                    <div class="step-content">
+                        <div class="step-inner">
+                            <ul>
+                                <li>Truy cập: <a href="https://ncovi.dichvucong.gov.vn/p/home/dvc-ncovi-chi-tiet-thu-tuc-giai-quyet-nhan-tro-cap-that-nghiep.html?ma_thu_tuc=1.001978" target="_blank" class="ui-link">Link nộp hồ sơ</a>.</li>
+                                <li>Nhấn nút <span class="ui-btn">Đăng nhập</span> (góc trên cùng bên phải).</li>
+                                <li>Chọn <span class="ui-btn">Tài khoản cấp bởi Cổng DVC Quốc gia</span>.</li>
+                                <li>Nhập số CCCD và mật khẩu, sau đó nhập mã OTP gửi về điện thoại.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BƯỚC 2 -->
+                <div class="step-item">
+                    <input type="checkbox" id="step2" class="step-trigger">
+                    <label for="step2" class="step-header">
+                        <div class="step-num">2</div>
+                        <div class="step-title">Chọn mục "Nộp trực tuyến"</div>
+                        <div class="step-icon">▼</div>
+                    </label>
+                    <div class="step-content">
+                        <div class="step-inner">
+                            <ul>
+                                <li>Sau khi đăng nhập thành công, bạn sẽ thấy thông tin thủ tục <strong>"Giải quyết hưởng trợ cấp thất nghiệp"</strong>.</li>
+                                <li>Tìm và nhấn nút <span class="ui-btn" style="background: #28a745; color: white;">Nộp trực tuyến</span> (thường nằm ở bên phải màn hình).</li>
+                                <li>Hệ thống sẽ chuyển bạn đến trang <strong>Tờ khai điện tử</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BƯỚC 3 -->
+                <div class="step-item">
+                    <input type="checkbox" id="step3" class="step-trigger">
+                    <label for="step3" class="step-header">
+                        <div class="step-num">3</div>
+                        <div class="step-title">Khai báo thông tin & Tải hồ sơ</div>
+                        <div class="step-icon">▼</div>
+                    </label>
+                    <div class="step-content">
+                        <div class="step-inner">
+                            <p><strong>Lưu ý quan trọng khi điền:</strong></p>
+                            <ul>
+                                <li><strong>Số sổ BHXH:</strong> Nhập 10 số, sau đó nhấn ra ngoài để hệ thống tự load dữ liệu (nếu có).</li>
+                                <li><strong>Nơi đề nghị hưởng:</strong> Chọn tỉnh/thành phố nơi bạn đang cư trú (không nhất thiết phải là nơi đóng BHXH).</li>
+                                <li><strong>Đính kèm:</strong> Nhấn <span class="ui-btn">Chọn tệp</span> tại dòng "Quyết định thôi việc" và "Sổ BHXH". <i>(Chụp đủ tất cả các tờ rời đã chốt)</i>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BƯỚC 4 -->
+                <div class="step-item">
+                    <input type="checkbox" id="step4" class="step-trigger">
+                    <label for="step4" class="step-header">
+                        <div class="step-num">4</div>
+                        <div class="step-title">Xác nhận nộp & Lưu mã hồ sơ</div>
+                        <div class="step-icon">▼</div>
+                    </label>
+                    <div class="step-content">
+                        <div class="step-inner">
+                            <ul>
+                                <li>Kiểm tra lại <strong>Số tài khoản ngân hàng</strong> (phải chính chủ).</li>
+                                <li>Nhập mã xác nhận hiển thị bằng hình ảnh.</li>
+                                <li>Nhấn <span class="ui-btn" style="background: #007bff; color: white;">Nộp hồ sơ</span>.</li>
+                                <li><strong>Chụp ảnh lại màn hình</strong> khi có thông báo "Nộp hồ sơ thành công" kèm mã hồ sơ để tra cứu sau này.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Trang hướng dẫn phi lợi nhuận hỗ trợ người lao động 2026.</p>
+            <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">Thông tin chính thức tại: <a href="https://dichvucong.gov.vn" style="color: #ffc107;">dichvucong.gov.vn</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
