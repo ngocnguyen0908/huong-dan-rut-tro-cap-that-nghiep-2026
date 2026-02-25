@@ -90,6 +90,15 @@
         .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success-color); font-weight: bold; }
         .info-tag { display: inline-block; background: #e9ecef; padding: 2px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
 
+        /* FORMULA BOX */
+        .formula-container {
+            background: #eef2f7; border-radius: 12px; padding: 30px; margin: 20px 0; border-left: 6px solid var(--primary-color);
+        }
+        .formula-box {
+            background: var(--primary-color); color: white; padding: 15px;
+            border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; margin: 15px 0;
+        }
+
         /* ACCORDION STEPS */
         .steps-wrapper { max-width: 900px; margin: 0 auto; }
         .step-item {
@@ -120,7 +129,7 @@
         .ui-link { color: #0056b3; font-weight: 600; text-decoration: underline; }
 
         .step-trigger { display: none; }
-        .step-trigger:checked ~ .step-content { max-height: 1200px; }
+        .step-trigger:checked ~ .step-content { max-height: 2500px; }
         .step-trigger:checked ~ .step-header { background: #f8fafc; border-bottom: 1px solid var(--border-color); }
         .step-trigger:checked ~ .step-header .step-icon { transform: rotate(180deg); }
 
@@ -186,14 +195,13 @@
             <h2 class="section-title reveal">Hồ Sơ Cần Chuẩn Bị Để Nộp Online</h2>
             <div style="max-width: 850px; margin: 0 auto;" class="reveal">
                 <div class="card" style="background: white; border: 2px solid #ffe58f;">
-                    <p style="font-weight: bold; margin-bottom: 15px; color: #856404;">Vui lòng chuẩn bị các tệp tin (ảnh chụp hoặc file PDF) sau đây trước khi bắt đầu nộp trực tuyến:</p>
+                    <p style="font-weight: bold; margin-bottom: 15px; color: #856404;">Vui lòng chuẩn bị sẵn các file ảnh/PDF sau trước khi nộp:</p>
                     
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                         <div>
                             <h4 style="color: var(--primary-color); margin-bottom: 10px;">1. Giấy tờ rời việc (Bắt buộc)</h4>
                             <ul class="check-list">
                                 <li>Quyết định thôi việc.</li>
-                                <li>Hoặc Quyết định sa thải.</li>
                                 <li>Hoặc Thông báo chấm dứt HĐLD.</li>
                                 <li><em>(Chụp rõ nét bản gốc có dấu đỏ)</em></li>
                             </ul>
@@ -202,17 +210,16 @@
                             <h4 style="color: var(--primary-color); margin-bottom: 10px;">2. Sổ Bảo hiểm xã hội</h4>
                             <ul class="check-list">
                                 <li>Ảnh chụp mặt bìa sổ BHXH.</li>
-                                <li>Ảnh chụp <strong>tất cả</strong> các tờ rời xác nhận quá trình đóng đã được chốt.</li>
+                                <li>Ảnh chụp <strong>tất cả</strong> các tờ rời chốt quá trình đóng.</li>
                             </ul>
                         </div>
                     </div>
 
                     <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed var(--border-color);">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">3. Thông tin cá nhân khác</h4>
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">3. Thông tin cá nhân</h4>
                         <ul class="check-list">
-                            <li><strong>Số tài khoản ngân hàng:</strong> Phải là tài khoản chính chủ của bạn.</li>
-                            <li><strong>Số điện thoại:</strong> Số đã dùng nhận mã OTP từ Cổng dịch vụ công.</li>
-                            <li><strong>Ảnh CCCD:</strong> Để đối chiếu thông tin nếu cần.</li>
+                            <li><strong>Số tài khoản:</strong> Phải là tài khoản ngân hàng chính chủ.</li>
+                            <li><strong>Số điện thoại:</strong> Đã đăng ký chính chủ để nhận mã OTP.</li>
                         </ul>
                     </div>
                 </div>
@@ -220,62 +227,64 @@
         </div>
     </section>
 
-    <!-- BẢNG TRA CỨU SỐ THÁNG HƯỞNG -->
-    <section id="tra-cuu-thang" style="background: #fafafa;">
+    <!-- CÁCH TÍNH TIỀN HƯỞNG -->
+    <section id="cach-tinh-tien">
         <div class="container">
-            <h2 class="section-title reveal">Số Tháng Hưởng Tương Ứng Số Năm Đóng</h2>
-            <div style="max-width: 800px; margin: 0 auto;" class="reveal">
-                <div class="card" style="background: white;">
-                    <p style="margin-bottom: 20px;">Theo Luật Việc làm, thời gian hưởng được tính như sau:</p>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Thời gian đóng BHTN</th>
-                                <th>Số tháng được hưởng</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Đủ 12 tháng đến đủ 36 tháng</td>
-                                <td><strong>03 tháng</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Đủ 48 tháng (4 năm)</td>
-                                <td><strong>04 tháng</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Đủ 60 tháng (5 năm)</td>
-                                <td><strong>05 tháng</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Đủ 120 tháng (10 năm)</td>
-                                <td><strong>10 tháng</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Đủ 144 tháng (12 năm) trở lên</td>
-                                <td><strong>12 tháng (Tối đa)</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <h2 class="section-title reveal">Cách Tính Số Tiền Hưởng Mỗi Tháng</h2>
+            <div style="max-width: 900px; margin: 0 auto;" class="reveal">
+                <div class="formula-container">
+                    <p>Mức hưởng trợ cấp thất nghiệp hằng tháng được tính bằng:</p>
+                    <div class="formula-box">
+                        Mức hưởng = Lương bình quân 06 tháng liền kề x 60%
+                    </div>
+                    
+                    <div style="margin-top: 25px; padding: 20px; background: white; border-radius: 8px;">
+                        <h4 style="color: var(--highlight-text); margin-bottom: 10px;">Ví dụ thực tế:</h4>
+                        <p>Anh A có mức lương đóng BHTN trong 6 tháng cuối trước khi nghỉ việc là <strong>10.000.000đ/tháng</strong>.</p>
+                        <p>Số tiền anh A nhận mỗi tháng sẽ là:</p>
+                        <p style="font-size: 1.2rem; font-weight: bold; color: var(--success-color); margin-top: 5px;">
+                            10.000.000 x 60% = 6.000.000 VNĐ / tháng
+                        </p>
+                        <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+                        <p>Nếu anh A đã đóng BHTN được <strong>4 năm (48 tháng)</strong>, anh A sẽ được hưởng <strong>04 tháng</strong> trợ cấp.</p>
+                        <p>=> Tổng số tiền nhận được: 6.000.000 x 4 = <strong>24.000.000 VNĐ</strong>.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CHÍNH SÁCH BẢO LƯU -->
-    <section id="bao-luu">
-        <div class="container">
-            <h2 class="section-title reveal">Nếu sau 3 tháng không nộp hồ sơ?</h2>
-            <div class="grid-3 reveal" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1000px; margin: 0 auto;">
-                <div class="card" style="border-left: 5px solid var(--accent-color);">
-                    <h3>Cơ chế Bảo lưu tự động</h3>
-                    <p>Nếu bạn không nộp hồ sơ hưởng trong vòng 03 tháng, thời gian đóng BHTN <strong>không bị mất đi</strong>.</p>
-                    <p style="margin-top: 10px;">Thời gian này sẽ được tự động bảo lưu và cộng dồn vào lần làm việc/đóng bảo hiểm tiếp theo.</p>
-                </div>
-                <div class="card">
-                    <h3>Lưu ý quan trọng</h3>
-                    <p>Bạn không cần phải đi làm thủ tục bảo lưu. Hệ thống tự nhận diện. Tuy nhiên, bạn sẽ không được nhận tiền của đợt nghỉ việc này nữa.</p>
-                </div>
+            <!-- BẢNG TRA CỨU SỐ THÁNG HƯỞNG -->
+            <div style="max-width: 800px; margin: 40px auto 0;" class="reveal">
+                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">Bảng tra cứu thời gian hưởng</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Thời gian đóng BHTN</th>
+                            <th>Số tháng được hưởng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Đủ 12 tháng đến đủ 36 tháng</td>
+                            <td><strong>03 tháng</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Đủ 48 tháng (4 năm)</td>
+                            <td><strong>04 tháng</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Đủ 60 tháng (5 năm)</td>
+                            <td><strong>05 tháng</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Đủ 120 tháng (10 năm)</td>
+                            <td><strong>10 tháng</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Đủ 144 tháng (12 năm) trở lên</td>
+                            <td><strong>12 tháng (Tối đa)</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -296,27 +305,46 @@
                     <div class="step-content">
                         <div class="step-inner">
                             <p style="margin-bottom: 10px;"><a href="https://ncovi.dichvucong.gov.vn/p/home/dvc-ncovi-chi-tiet-thu-tuc-giai-quyet-nhan-tro-cap-that-nghiep.html?ma_thu_tuc=1.001978" target="_blank" class="ui-link">Bấm vào link này nộp hồ sơ trực tuyến</a>.</p>
-                            <p>Bấm <strong>Đăng nhập</strong> bằng tài khoản Cổng dịch vụ công Quốc gia hoặc <strong>VNeID</strong>. Sau khi đăng nhập thành công, hệ thống sẽ đưa bạn quay lại trang thủ tục, nhấn nút <span class="ui-btn" style="background:#28a745; color:white;">Nộp trực tuyến</span>.</p>
+                            <p>Đăng nhập bằng <strong>VNeID</strong> hoặc tài khoản Cổng dịch vụ công. Sau đó nhấn nút <span class="ui-btn" style="background:#28a745; color:white;">Nộp trực tuyến</span>.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- BƯỚC 2 -->
+                <!-- BƯỚC 2: HƯỚNG DẪN ĐIỀN CÁC MỤC (Cập nhật theo ảnh) -->
                 <div class="step-item">
                     <input type="checkbox" id="step2" class="step-trigger">
                     <label for="step2" class="step-header">
                         <div class="step-num">2</div>
-                        <div class="step-title">Điền Tờ khai & Chọn ngân hàng</div>
+                        <div class="step-title">Điền Tờ khai (Chi tiết các mục theo giao diện)</div>
                         <div class="step-icon">▼</div>
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Hệ thống tự điền tên và số CCCD. Bạn cần kiểm tra và nhập bổ sung:</p>
-                            <ul style="margin-left: 20px; list-style-type: disc; margin-top: 10px;">
-                                <li><strong>Mã số BHXH:</strong> Nhập 10 số ghi trên bìa sổ BHXH.</li>
-                                <li><strong>Hình thức nhận:</strong> Chọn "Qua tài khoản". Nhập chính xác số tài khoản và tên ngân hàng (phải là tài khoản chính chủ).</li>
-                                <li><strong>Nơi hưởng:</strong> Chọn tỉnh/thành phố nơi bạn đang cư trú và muốn nhận thông báo kết quả.</li>
-                            </ul>
+                            <div style="background: #fff; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                                <h4 style="color: var(--highlight-text); margin-bottom: 12px;">Hướng dẫn điền cụ thể:</h4>
+                                
+                                <p><strong>1. Lý do chấm dứt hợp đồng:</strong> Ghi đúng như trong quyết định thôi việc. Ví dụ: <em>"Hết hạn hợp đồng lao động"</em> hoặc <em>"Hai bên thỏa thuận chấm dứt hợp đồng lao động"</em>.</p>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                                    <div>
+                                        <p><strong>2. Loại hợp đồng:</strong></p>
+                                        <p style="font-size: 0.9rem; color: #555;">Chọn loại HĐ gần nhất bạn vừa ký (HĐ không xác định thời hạn, HĐ xác định thời hạn từ 12-36 tháng...).</p>
+                                    </div>
+                                    <div>
+                                        <p><strong>3. Số tháng đóng BHTN:</strong></p>
+                                        <p style="font-size: 0.9rem; color: #555;">Xem số tháng tổng cộng trên <strong>Tờ rời cuối cùng</strong> của sổ BHXH.</p>
+                                    </div>
+                                </div>
+
+                                <p><strong>4. Địa chỉ đăng ký nhận thẻ BHYT:</strong></p>
+                                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">Trong thời gian hưởng thất nghiệp, bạn được cấp thẻ BHYT miễn phí. Nhập địa chỉ bạn đang ở để bưu điện gửi thẻ về tận nhà.</p>
+
+                                <p><strong>5. Nơi đề nghị nhận trợ cấp:</strong></p>
+                                <ul style="margin-left: 20px; font-size: 0.9rem;">
+                                    <li>Chọn <strong>"Tài khoản ngân hàng"</strong> (Khuyến khích): Nhập STK và Tên ngân hàng chính chủ để tiền tự động đổ về.</li>
+                                    <li>Hoặc chọn "Cơ quan BHXH" nếu muốn nhận tiền mặt tại bưu điện địa phương.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -326,17 +354,17 @@
                     <input type="checkbox" id="step3" class="step-trigger">
                     <label for="step3" class="step-header">
                         <div class="step-num">3</div>
-                        <div class="step-title">Đính kèm ảnh hồ sơ</div>
+                        <div class="step-title">Tải lên tài liệu đính kèm</div>
                         <div class="step-icon">▼</div>
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Tải lên ảnh chụp hoặc file PDF của các giấy tờ đã chuẩn bị ở phần danh mục:</p>
+                            <p>Tại mục <strong>Tài liệu đính kèm</strong>, bạn cần tải lên các bản chụp rõ nét:</p>
                             <ul style="margin-left: 20px; list-style-type: disc; margin-top: 10px;">
-                                <li><strong>Mục 1 (Giấy tờ rời việc):</strong> Tải ảnh Quyết định thôi việc/chấm dứt HĐLD.</li>
-                                <li><strong>Mục 2 (Sổ BHXH):</strong> Tải ảnh bìa sổ và toàn bộ các tờ rời chốt quá trình đóng BHTN.</li>
+                                <li>Quyết định thôi việc/sa thải/chấm dứt HĐLD.</li>
+                                <li>Bìa sổ BHXH và các tờ rời xác nhận đóng bảo hiểm.</li>
                             </ul>
-                            <p style="margin-top: 10px; font-style: italic;">*Lưu ý: Chụp ảnh rõ nét, không bị mất góc, không bị lóa sáng để cán bộ dễ kiểm duyệt.</p>
+                            <p style="margin-top: 10px; color: #d9534f; font-weight: bold;">Cảnh báo: Nếu ảnh mờ hoặc thiếu tờ rời, hồ sơ sẽ bị trả lại để bổ sung, làm chậm thời gian nhận tiền.</p>
                         </div>
                     </div>
                 </div>
@@ -346,15 +374,32 @@
                     <input type="checkbox" id="step4" class="step-trigger">
                     <label for="step4" class="step-header">
                         <div class="step-num">4</div>
-                        <div class="step-title">Gửi hồ sơ & Theo dõi mã</div>
+                        <div class="step-title">Gửi hồ sơ & Theo dõi kết quả</div>
                         <div class="step-icon">▼</div>
                     </label>
                     <div class="step-content">
                         <div class="step-inner">
-                            <p>Rà soát lại toàn bộ thông tin lần cuối. Nhập mã xác nhận (Captcha) và nhấn <span class="ui-btn" style="background:#007bff; color:white;">Nộp hồ sơ</span>.</p>
-                            <p style="margin-top: 10px;"><strong>Sau khi nộp:</strong> Hệ thống sẽ cấp một <strong>Mã hồ sơ</strong>. Hãy chụp màn hình hoặc lưu lại mã này để tra cứu tại mục "Hồ sơ của tôi" để biết hồ sơ đã được tiếp nhận hay cần bổ sung gì thêm.</p>
+                            <p>Nhập mã xác nhận và nhấn <span class="ui-btn" style="background:#007bff; color:white;">Nộp hồ sơ</span>.</p>
+                            <p style="margin-top: 10px;"><strong>Sau khi nộp thành công:</strong> Hãy lưu lại <strong>Mã hồ sơ</strong>. Kết quả sẽ được gửi về qua tin nhắn điện thoại hoặc mục "Hồ sơ của tôi" trên cổng dịch vụ công trong vòng khoảng 20 ngày làm việc.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHÍNH SÁCH BẢO LƯU -->
+    <section id="bao-luu" style="background: #fafafa;">
+        <div class="container">
+            <h2 class="section-title reveal">Nếu không nộp hồ sơ trong 3 tháng?</h2>
+            <div class="grid-3 reveal" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1000px; margin: 0 auto;">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Bảo lưu tự động</h3>
+                    <p>Thời gian đóng BHTN <strong>không bị mất đi</strong>. Hệ thống sẽ tự động bảo lưu và cộng dồn vào lần làm việc tiếp theo.</p>
+                </div>
+                <div class="card">
+                    <h3>Quyền lợi BHYT</h3>
+                    <p>Lưu ý: Nếu không nộp hồ sơ hưởng thất nghiệp, bạn sẽ không được cấp thẻ BHYT miễn phí trong thời gian này.</p>
                 </div>
             </div>
         </div>
@@ -368,9 +413,7 @@
     </footer>
 
     <script>
-        // Scroll Reveal Animation Script
         const revealElements = document.querySelectorAll('.reveal');
-        
         const revealOnScroll = () => {
             const triggerBottom = window.innerHeight * 0.9;
             revealElements.forEach(el => {
@@ -380,7 +423,6 @@
                 }
             });
         };
-
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
